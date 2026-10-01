@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "modmasterz",
+  "version": "${version}",
+  "name": "LootLens",
+  "description": "Find items faster in chests with a live search bar, hide non-matching chest slots, and open a quick Chest Contents summary showing item names, counts, and the total. Includes a clean three-dot menu and a gold search outline for Minecraft Fabric 1.21.1.",
+  "authors": [
+    "ModMasterz"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.modmasterz.ModMasterz"
+    ],
+    "client": [
+      "com.modmasterz.client.ModMasterzClient"
+    ]
+  },
+  "mixins": [
+    "modmasterz.mixins.json",
+    {
+      "config": "modmasterz.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "icon": "assets/lootlens/icon.png"
+}
